@@ -1,6 +1,6 @@
-# Sequelize
+[Voltar](/Readme.md)
 
-[Voltar](/Readme)
+# Sequelize
 
 Sequelize é um ORM, ferramenta usada para abstrair a parte de Banco de dados. Desta forma é possível usar javascript para criar, alterar, excluir, etc ao invés de usar comandos sql de insert, update, delete.
 

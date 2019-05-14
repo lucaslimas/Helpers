@@ -1,6 +1,6 @@
-# Criando Models
+[Voltar](/src/Sequelize.md)
 
-[Voltar](/src/Sequelize)
+# Criando Models
 
 ## Criando um modelo de usuário:
 

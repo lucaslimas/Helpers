@@ -1,10 +1,12 @@
+[Voltar](/Readme.md)
+
 # Configurando ESLint
 
 ESLint é um gerenciador de código, deixando todos os códigos feitos por diversos desenvolvedores com o mesmo padrão. Isso garante uma padronização no código fonte da aplicação independentemente do desevolvedor.
 
 ## Instalando ESLint
 
-Necessário estar com as extensões **eslint** e **prettier** instaladas no vscode. Veja [Instalando as extensões eslint e prettier](src/extentions/index).
+Necessário estar com as extensões **eslint** e **prettier** instaladas no vscode. Veja [Instalando as extensões eslint e prettier](src/extentions/index.md).
 
 Adicionar o pacote eslint em modo de desenvolvimento
 

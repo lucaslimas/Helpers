@@ -2,5 +2,5 @@
 
 - Configurando Ambiente de desenvolvimento
 - [Node.js](/src/node/index.md)
-- [Sequelize](/src/sequelize/index)
-- [PostgresSQL](/src/postgresSQL/index)
+- [Sequelize](/src/sequelize/index.md)
+- [PostgresSQL](/src/postgresSQL/index.md)
