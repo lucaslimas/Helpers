@@ -22,12 +22,6 @@ yarn init -y
 - Configurar o [ESLint](/src/ESLint/index.md).
 - Configurar o [EditorConfig](/src/EditorConfig.md).
 
-## Configurando estrutura das pastas
-
-No editor é comum separar os arquivos criados pelo desenvolvedor, dos arquivos de estrutura de funcionamento do projeto. Para isso é necessário criar a pasta **src** na raiz do projeto, onde serão armazenados todos os arquivos para o projeto.
-
-Criar os arquivos **index.js** e **server.js**
-
 ## Instalando o Nodemon
 
 > Nodemon é um file watcher que roda internamente o próprio comando node. Dessa forma toda e qualquer atualização é executada automaticamente, sem a necessidade de parar e rodar o node novamente.
@@ -46,7 +40,7 @@ Adicionar o seguinte script para inicialização do nodemon. Adicionar o script 
 }
 ```
 
-Por padrão utilizamos "start" no script, dessa quando executar o comando, não precisará escrever node index.js e sim yarn start.
+Por padrão utilizamos "start" no script, dessa forma quando executar o comando, não precisará escrever node index.js e sim yarn start.
 
 ```
 yarn start
@@ -58,7 +52,7 @@ Para parar o monitoramento aperte
 Ctrl + C
 ```
 
-## Criando serviço web
+## Disponilizando o serviço web
 
 Para disponibilizar serviços para ser consumidos pelos front-ends, será usado o pacote **express**, esse pacote é utilizado para controlar as requisições (rotas) no servidor.
 
@@ -70,4 +64,78 @@ Instalar o pacote express
 yarn add express
 ```
 
-Criar o arquivo **index.js** na raiz
+## Configurando estrutura das pastas
+
+No editor é comum separar os arquivos criados pelo desenvolvedor, dos arquivos de estrutura de funcionamento do projeto. Para isso é necessário criar a pasta **src** na raiz do projeto, onde serão armazenados todos os arquivos para o projeto.
+
+Criar o arquivos: routes.js, server.js e index.jsdentro da pasta **src**
+
+Arquivo **routes.js**
+
+```js
+const express = require("express");
+
+const routes = express.Router();
+
+routes.get("/", (req, res) => res.send("Hello World"));
+
+module.exports = routes;
+```
+
+Arquivo **server.js**
+
+```js
+const express = require("express");
+const routes = require("./routes");
+
+class App {
+  constructor() {
+    this.express = express();
+    this.isDev = process.env.NODE_ENV !== "production";
+
+    this.middlewares();
+    this.routes();
+  }
+
+  middlewares() {
+    this.express.use(express.urlencoded({ extended: false }));
+  }
+
+  routes() {
+    this.express.use(routes);
+  }
+}
+
+module.exports = new App().express;
+```
+
+Arquivo **index.js**
+
+```js
+const server = require("./server");
+server.listen(process.env.PORT || 3000);
+```
+
+## Testando o serviço
+
+Executar o comando
+
+```
+yarn start
+```
+
+Abrir o navegar no endereço [http://localhost:3000](http://localhost:3000). Deverá aparecer o texto **Hello World**
+
+# Links
+
+Configurando o [Sequelizer](/src/sequelize/index.md)
+
+# Comandos utilizados nesse artigo
+
+```
+yarn add sequelize
+yarn add sequelize-cli -D
+npx sequelize init
+npx sequelize migration:create --name=create-users
+yarn add pg
+```

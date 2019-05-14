@@ -29,7 +29,7 @@ Com esse comando algumas pastas foram criadas no projeto, como config, migration
 - Mover a pasta **migrations** e **seeders** para a pasta **database**;
 - Mover a pasta **models** para a pasta **app**;
 
-Criar o arquivo de configuração do Sequelize na raiz do projeto com o nome **.sequlizerc** com as seguintes informações:
+Criar o arquivo de configuração do Sequelize na raiz do projeto com o nome **.sequelizerc** com as seguintes informações:
 
 ```js
 const path = require("path");
@@ -133,9 +133,8 @@ module.exports = db;
 # Comandos utilizados nesse artigo
 
 ```
-yarn add sequelize
-yarn add sequelize-cli -D
-npx sequelize init
-npx sequelize migration:create --name=create-users
-yarn add pg
+yarn init -y
+yarn add nodemon -D
+yarn start
+yarn add express
 ```
