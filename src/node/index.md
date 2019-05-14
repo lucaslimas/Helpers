@@ -24,6 +24,8 @@ yarn init -y
 
 No editor é comum separar os arquivos criados pelo desenvolvedor, dos arquivos de estrutura de funcionamento do projeto. Para isso é necessário criar a pasta **src** na raiz do projeto, onde serão armazenados todos os arquivos para o projeto.
 
+Criar os arquivos **index.js** e **server.js**
+
 ## Instalando o Nodemon
 
 > Nodemon é um file watcher que roda internamente o próprio comando node. Dessa forma toda e qualquer atualização é executada automaticamente, sem a necessidade de parar e rodar o node novamente.
