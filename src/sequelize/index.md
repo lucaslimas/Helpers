@@ -49,7 +49,7 @@ npx sequelize migration:create --name=create-users
 
 Deverá ser criado um arquivo dentro da pasta **src/database/migrations/xxxxxxx-create-users.js**
 
-> Migrations ela é um controle de versão da base de dados, guardando todas as alterações na ordem que foram feitas, para que outros desenvolvedores, ou servidor, executem e se atualizem com a nova configuração.
+> Migrations é um controle de versão da base de dados, guardando todas as alterações na ordem que foram feitas, para que outros desenvolvedores, ou servidor, executem e se atualizem com a nova configuração.
 
 ## Alterarando a configuração do sequelize para o banco de dados
 

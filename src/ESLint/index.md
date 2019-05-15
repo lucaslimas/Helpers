@@ -17,7 +17,7 @@ yarn add eslint -D
 Iniciar o eslint
 
 ```
-yarn eslint --init
+npx eslint --init
 ```
 
 ---
