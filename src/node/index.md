@@ -133,9 +133,8 @@ Configurando o [Sequelizer](/src/sequelize/index.md)
 # Comandos utilizados nesse artigo
 
 ```
-yarn add sequelize
-yarn add sequelize-cli -D
-npx sequelize init
-npx sequelize migration:create --name=create-users
-yarn add pg
+yarn init -y
+yarn add nodemon -D
+yarn add express
+yarn start
 ```
