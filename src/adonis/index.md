@@ -126,7 +126,7 @@ module.exports = ExceptionHandler;
 - [Trabalhando com Controllers e Models](/src/adonis/controllersModels.md)
 - [Rotas](/src/adonis/routes.md)
 - [Autenticação JWT](/src/adonis/jwt.md)
-- [Enviando Email](/src/adonis/email)
+- [Enviando Email](/src/adonis/email.md)
 
 # Comandos utilizados nesse artigo
 
