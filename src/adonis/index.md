@@ -133,7 +133,7 @@ module.exports = ExceptionHandler;
 ```
 npm install -g @adonisjs/cli
 adonis
-adonis new tetrus --api-only
+adonis new appName --api-only
 adonis serve --dev
 adonis make:ehandler
 ```
