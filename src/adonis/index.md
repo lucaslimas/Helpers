@@ -135,4 +135,5 @@ npm install -g @adonisjs/cli
 adonis
 adonis new tetrus --api-only
 adonis serve --dev
+adonis make:ehandler
 ```
