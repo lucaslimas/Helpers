@@ -2,11 +2,11 @@
 
 # Adonis JS
 
-# Node.js
+O Adonis é um framework mais robusto com uma série de funcionalidades prontas, extremamente baseado em frameworks famosos de outras linguagens como o Laravel, Rails ou Django.
 
-Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos distribuídos.
+Diferente do ExpressJS o Adonis assim que instalado já vem com uma estrutura pronta e o desenvolvedor é limitado a utilizar essa organização para seus arquivos, além de já possuir uma série de funcionalidades pré-implementadas como autenticação, ORM, validação, envio de e-mail, logging, etc...
 
-[Referência](http://nodebr.com/o-que-e-node-js/)
+Referência [Rocketseat](https://blog.rocketseat.com.br/adonis-vs-express/)
 
 ## Instalando o Adonis
 
