@@ -16,4 +16,7 @@ Referência [Rocketseat](https://blog.rocketseat.com.br/adonis-vs-express/).
 - [Usando Rotas](/src/adonis/routes.md)
 - [Autenticação JWT](/src/adonis/jwt.md)
 - [Enviando Email](/src/adonis/email.md)
-- [Filas com Redis](/src/adonis/redis.md)
+- [Filas com Redis](/src/adonis/redis.md) - Processamento Paralelo
+- [Paginação](/src/adonis/paginate.md)
+- [Cors](/src/adonis/cors.md)
+- [Sentry](/src/adonis/sentry.md) - Tratamento de exceptions no cliente
