@@ -61,23 +61,23 @@ Ctrl + C
 
 ## Configurações do Ambiente
 
-- Configurar o [ESLint](/src/ESLint/index.md).
+1. Configurar o [ESLint](/src/eslint.md).
 
-  > No arquivo **.eslintrc.json**, após a configuração do ESLint, incluir na propriedade **globals** o opção `"use":true`. Isso faz com que o eslint entenda o use como uma função glogal nos arquivos js. Incluir na prop **rules** as informações **class-methods-use-this="off"** e **consistent-return="off"**.
+> No arquivo **.eslintrc.json**, após a configuração do ESLint, incluir na propriedade **globals** o opção `"use":true`. Isso faz com que o eslint entenda o use como uma função glogal nos arquivos js. Incluir na prop **rules** as informações **class-methods-use-this="off"** e **consistent-return="off"**.
 
-  ```json
-  "globals": {
-    ...
-    "use": true
-  },
+```json
+"globals": {
+  ...
+  "use": true
+},
 
-  "rules": {
-    "class-methods-use-this": "off",
-    "consistent-return": "off"
-  }
-  ```
+"rules": {
+  "class-methods-use-this": "off",
+  "consistent-return": "off"
+}
+```
 
-- Configurar o [EditorConfig](/src/EditorConfig.md).
+2. Configurar o [EditorConfig](/src/EditorConfig.md).
 
 ## Tratando Exeções
 

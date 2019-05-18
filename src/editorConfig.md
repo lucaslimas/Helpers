@@ -1,6 +1,6 @@
 [Voltar](/Readme.md)
 
-# Editor
+# EditorConfig
 
 EditorConfig é um arquivo que adicionado ao projeto, garante que o desenvolvedor que estiver utilizando o editor, tenha as mesmas configurações de linha, espaçamentos, salto de linha, isso indepentemente de qual editor esteja utilizando, seja vscode, sublime, etc.
 
