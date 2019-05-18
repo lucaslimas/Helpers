@@ -1,6 +1,6 @@
 [Voltar](/src/adonis/index.md)
 
-# Rotas
+# Usando Rotas
 
 Para configurar as rotas no adonis, basta acessar o arquivo **routes.js** dentro da pasta **start** e informar qual o método e para qual rota deseja chamar o método do controller.
 
@@ -18,62 +18,38 @@ Para visualizar todas as rotas configuradas no adonis, execute o comando:
 adonis route:list
 ```
 
-## Utilizando Validadores
+## Refatorando as Rotas
 
-Validadores permitem criar validações para parâmetros passados para rotas.
+Em determinados momentos no arquivo de rotas podemos fazer com que as rotas de um determinado controller, seja feitas automaticamente. Veja o antes o depois:
 
-Instalar o vallidador do Adonis
-
-```
-adonis install @adonisjs/validator
-```
-
-Adicionar o provider de validação no arquivo **app.js** da pasta **start**, dentro dos providers
-
-```
-'@adonisjs/validator/providers/ValidatorProvider'
-```
-
-Para validar a rota é necessário criar o arquivo de validação para cada rota (normalmente utilizamos o mesmo nome do model). Nesse exemplo vamos criar um validador para a rota de criação do usuário.
-
-```
-adonis make:validator User
-```
-
-Será criado a pasta **Validators** dentro da pasta **app** na raiz do projeto.
-
-Nesse arquivo criado, devemos adicionar as regras de validações. Por exemplo, em uma rota de criação de usuários.
+Antes
 
 ```js
-class User {
-  get validateAll() {
-    return true;
-  }
-
-  get rules() {
-    return {
-      username: "required|unique:users",
-      email: "required|email|unique:users",
-      password: "required|confirmed"
-    };
-  }
-}
-
-module.exports = User;
+Route.get("events", "EventController.index");
+Route.post("events", "EventController.store").validator("Event/Store");
+Route.put("events/:id", "EventController.update").validator("Event/Update");
+Route.get("events/:id", "EventController.show");
+Route.delete("events/:id", "EventController.destroy");
 ```
 
-> O método validateAll faz com que o validador entenda que é pra fazer a validação em todos os campos e não apenas no primeiro que encontrar.
-
-Adicione a validação na rota de criação do usuário
+Depois
 
 ```js
-Route.post("users", "UserController.store").validator("User");
+Route.resource("events", "EventController")
+  .apiOnly()
+  .validator(
+    new Map([
+      [["events.store"], ["Event/Store"]],
+      [["events.update"], ["Event/Update"]]
+    ])
+  );
 ```
 
-[Referência Validadores](https://adonisjs.com/docs/4.1/validator)
+> apiOnly() indica para criar apenas os métodos da api, sem o métodos de retorno de views
 
 # Links
 
+- [Validadores](/src/adonis/validators.md)
 - [Trabalhando com Controllers e Models](/src/adonis/controllersModels.md)
 
 # Comandos utilizados nesse artigo

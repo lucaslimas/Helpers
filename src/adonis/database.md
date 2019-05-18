@@ -22,14 +22,8 @@ Para verificar se está correta a configuração do banco de dados, execute o co
 adonis migration:run
 ```
 
-> Migrations é um controle de versão da base de dados, guardando todas as alterações na ordem que foram feitas, para que outros desenvolvedores, ou servidor, executem e se atualizem com a nova configuração.
+Veja [Migrations](/src/adonis/migrations.md).
 
 As tabelas serão criadas no Banco de Dados. Será criada a tabela adonis_schema, que serão guardadas todas as migrations que foram executadas no banco de dados.
-
-Para desfazer as migrations
-
-```
-adonis migration:rollback
-```
 
 > Execute esse comando somente quando ainda não foi disponibilizada essa migration para a produção ou outros desenvolvedores.

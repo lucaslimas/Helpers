@@ -6,7 +6,19 @@ O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar
 
 [Leia mais](https://medium.com/tableless/entendendo-tokens-jwt-json-web-token-413c6d1397f6)
 
+#### Índice
+
 ---
+
+1. [Criando o controller de sessão](#Criando-o-controller-de-sessão)
+2. [Validando parâmetros na rota](#Validando-parâmetros-na-rota)
+3. [Recuperação de Senha](#Recuperação-de-Senha)
+4. [Criando validadores para a recuperação de senhas](#Criando-validadores-para-a-recuperação-de-senhas)
+5. [Bloqueando rotas não autenticado](Bloqueando-rotas-não-autenticado)
+
+---
+
+## Criando o controller de sessão
 
 Criar o [controller](/src/adonis/controllersModels.md) **sessions** para requisição HTTP, para controlar a criação dos tokens
 
@@ -47,7 +59,7 @@ JSON: {
 }
 ```
 
-## Validando parâmetros
+## Validando parâmetros na rota
 
 Veja [Validando Rotas](/src/adonis/routes.md).
 
@@ -82,7 +94,7 @@ Incluir a validação na rota de autenticação
 Route.post("sessions", "SessionController.store").validator("Session");
 ```
 
-## Reset de Senha
+## Recuperação de Senha
 
 Nesse exemplo será utilizado o [Emailtrap](/src/adonis/email) para envio do email e o template do adonis para o e-mail.
 
@@ -169,7 +181,7 @@ class ForgotPasswordController {
 module.exports = ForgotPasswordController;
 ```
 
-## Criando validadores para o Reset
+## Criando validadores para a recuperação de senhas
 
 Veja [Validando Rotas](/src/adonis/routes.md).
 
@@ -243,7 +255,24 @@ Route.post("forgot_password", "ForgotPasswordController.store").validator(
 );
 ```
 
-## Alteração de Senha
+## Bloqueando rotas não autenticado
+
+Para bloquear as rotas para usuário não autorizado, deve se incluir um [middleware](/src/middleware.md) para a rota desejada.
+
+```js
+Route.get(url, closure).middleware(["auth"]);
+```
+
+Caso precise bloquear diversar rotas, é possível incluir o middleware em um grupo de rotas
+
+```js
+Route.group(() => {
+  Route.get(url, closure);
+  Route.post(url, closure);
+  Route.put(url, closure);
+  Route.delete(url, closure);
+}).middleware(["auth"]);
+```
 
 # Comandos utilizados nesse artigo
 
