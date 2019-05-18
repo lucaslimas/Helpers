@@ -14,3 +14,7 @@
 - Genymotion
 - Debug no Celular
 - [Configurações Iniciais](/src/mobile/initial.md)
+- [DebugJS](/src/mobile/debujs.md)
+- [Reactotron](/src/mobile/reactotron.md)
+- [React DevTools](/src/mobile/devtools.md)
+- [Babel Root Import](/src/mobile/babelrootimport.md)
