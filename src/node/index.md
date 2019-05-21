@@ -19,8 +19,8 @@ yarn init -y
 
 ## Configurações do Ambiente de desenvolvimento
 
-- Configurar o [ESLint](/src/ESLint/index.md).
-- Configurar o [EditorConfig](/src/EditorConfig.md).
+- Configurar o [ESLint](/src/eslint.md).
+- Configurar o [EditorConfig](/src/editorConfig.md).
 
 ## Instalando o Nodemon
 

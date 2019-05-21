@@ -7,6 +7,7 @@
 - [Express](/src/node/index.md)
 - [Sequelize](/src/sequelize/index.md)
 - [PostgresSQL](/src/postgresSQL/index.md)
+- [Babel Root Import](/src/mobile/babelrootimport.md)
 
 ## Mobile
 
