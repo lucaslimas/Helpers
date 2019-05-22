@@ -1,3 +1,5 @@
+[Voltar](/Readme.md)
+
 # Babel Root Import
 
 É um plugin que adiciona a oportunidade de usar importação utilizando o caminho raiz, ou seja, não tem a necessidade de informar toda a arvore do arquivo (caminho de onde estão localizados os arquivos).

@@ -1,4 +1,4 @@
-[Voltar](/src/Sequelize.md)
+[Voltar](/src/sequelize.md)
 
 # Criando Models
 

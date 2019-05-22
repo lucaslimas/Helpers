@@ -22,7 +22,7 @@ Iniciar o sequilize
 npx sequelize init
 ```
 
-Com esse comando algumas pastas foram criadas no projeto, como config, migrations, models e seeders, e devem ser movidas para outra localização (estamos utilizando a [estrutura padrão de pastas](/src/StructureDefault) da rocketseat):
+Com esse comando algumas pastas foram criadas no projeto, como config, migrations, models e seeders, e devem ser movidas para outra localização (estamos utilizando a [estrutura padrão de pastas](/src/structure_default.md) da rocketseat):
 
 - Mover a pasta **config** para dentro da pasta **src**;
 - Criar uma pasta chamada **database** dentro da pasta **src**;

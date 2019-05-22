@@ -1,6 +1,6 @@
 [Voltar](/Readme.md)
 
-# Node.js
+# Node.js e Express
 
 Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos distribuídos.
 
@@ -64,6 +64,25 @@ Instalar o pacote express
 yarn add express
 ```
 
+## Arquivo de Variáveis Ambiente
+
+Instale o pacote
+
+```
+yarn add dotenv
+```
+
+Crie o arquivo **.env** na raiz da aplicação
+
+> Esse arquivo é responsável por armazenar todas as variáveis do ambiente, por exemplo: PORT, NODE_ENV, etc.
+
+Com os seguintes códigos:
+
+```
+NODE_ENV=Development
+PORT=3000
+```
+
 ## Configurando estrutura das pastas
 
 No editor é comum separar os arquivos criados pelo desenvolvedor, dos arquivos de estrutura de funcionamento do projeto. Para isso é necessário criar a pasta **src** na raiz do projeto, onde serão armazenados todos os arquivos para o projeto.
@@ -112,8 +131,15 @@ module.exports = new App().express;
 Arquivo **index.js**
 
 ```js
+require("dotenv").config();
 const server = require("./server");
-server.listen(process.env.PORT || 3000);
+
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log(`Environment is ${process.env.NODE_ENV}`);
+  console.log(`App listening to port ${port}....`);
+  console.log("Press Ctrl+C to quit.");
+});
 ```
 
 ## Testando o serviço
