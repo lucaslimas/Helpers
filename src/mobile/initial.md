@@ -82,7 +82,7 @@ Veja [Configurando Babel Root Import](/src/mobile/babelrootimport.md)
 
 ---
 
-- [DebugJS](/src/mobile/debujs.md)
+- [DebugJS](/src/mobile/debugjs.md)
 - [Reactotron](/src/mobile/reactotron.md)
 - [React DevTools](/src/mobile/devtools.md)
 

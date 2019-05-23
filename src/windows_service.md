@@ -7,7 +7,7 @@ Este artigo cria um serviço com express que será executado como serviço no wi
 ## Iniciando o projeto
 
 Inicie o projeto node com express.
-Veja [express node](/src/node_express.md).
+Veja [express node](/src/express/startup.md).
 
 ## Criando estrutura do "deploy"
 

@@ -1,22 +1,44 @@
 [Voltar](/src/sequelize.md)
 
-# Criando Models
+# Models
 
 ## Criando um modelo de usuário:
 
 Criar o arquivo **User.js** dentro da pasta **models** com as seguintes informações:
 
 ```js
+const bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("User", {
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password_hash: DataTypes.String
-  });
+  const User = sequelize.define(
+    "User",
+    {
+      name: DataTypes.STRING,
+      email: DataTypes.STRING,
+      password: DataTypes.STRING
+    },
+    {
+      hooks: {
+        beforeSave: async user => {
+          if (user.password) {
+            user.password = await bcrypt.hash(user.password, 8);
+          }
+        }
+      }
+    }
+  );
+
+  User.prototype.checkPassword = function(pwd) {
+    return bcrypt.compare(pwd, this.password);
+  };
+
+  return User;
 };
 ```
 
 > Não é necessário criar os campos IDs e campos de associações, isso é feito automaticamente pelo sequelize
+
+> O pacote bcrypt foi utilizado para criptografar a senha do usuário.
 
 Criar o arquivo de migração para o usuário
 
@@ -49,15 +71,15 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
-      password_hash: {
+      password: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      create_at: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      update_at: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

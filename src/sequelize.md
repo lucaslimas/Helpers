@@ -59,10 +59,12 @@ Primeiramente altere o nome do arquivo **config.json**, localizado na pasta **sr
 module.exports = {
   dialect: "postgres",
   host: "127.0.0.1",
+  port: 5432,
   username: "docker",
   password: "docker",
   database: "database-name",
   operatorAliases: false,
+  logging: false,
   define: {
     timestamps: true,
     underscored: true,
@@ -126,7 +128,8 @@ db.Sequelize = Sequelize;
 module.exports = db;
 ```
 
-- [Criando Modelos](/src/sequelize/ModelsCreate)
+- [Criando Modelos](/src/sequelize/models.md)
+- [Criando Controles](/src/sequelize/controllers.md)
 
 [Manual oficial de referência do Sequelize](http://docs.sequelizejs.com/manual/)
 
