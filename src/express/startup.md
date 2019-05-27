@@ -91,7 +91,7 @@ PORT=3000
 
 No editor é comum separar os arquivos criados pelo desenvolvedor, dos arquivos de estrutura de funcionamento do projeto. Para isso é necessário criar a pasta **src** na raiz do projeto, onde serão armazenados todos os arquivos para o projeto.
 
-Criar o arquivos: routes.js, server.js e index.jsdentro da pasta **src**
+Criar o arquivos: routes.js, server.js e index.js dentro da pasta **src**
 
 Arquivo **routes.js**
 

@@ -26,7 +26,7 @@ A príncipal função que irei utilizar do webpack, será a criação de um buil
 Instalar os seguintes pacotes:
 
 ```
-yarn add -D webpack webpack-cli webpack-node-externals @babel/core @babel/preset-env babel-loader copy-webpack-plugin
+yarn add -D webpack webpack-cli webpack-node-externals @babel/core @babel/preset-env babel-loader copy-webpack-plugin regenerator-runtime
 ```
 
 Criar o arquivo de configuração do webpack com o nome **webpack.config.js** na raiz da aplicação
@@ -42,7 +42,7 @@ module.exports = [
     entry: "./src/index.js",
     target: "node",
     output: {
-      path: __dirname + "/dist",
+      path: `${__dirname}/dist`,
       filename: "index.js"
     },
     node: {
@@ -67,7 +67,10 @@ module.exports = [
         "__deploy__",
         {
           from: ".env-prod",
-          to: "."
+          to: ".[ext]",
+          transformPath() {
+            return ".env";
+          }
         },
         {
           from: ".windows_service",
@@ -84,7 +87,7 @@ module.exports = [
 Adicione mais dois scripts no arquivo **package.json** na propriedade **scripts**.
 
 ```json
-  "build": "rm -rf dist && webpack --mode development",
+  "build": "rm -rf dist && webpack --mode production",
   "test": "node ./dist/index.js"
 ```
 
