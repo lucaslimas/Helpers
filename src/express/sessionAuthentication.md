@@ -40,7 +40,7 @@ this.express.use(
 
 Referência [express session](https://github.com/expressjs/session)
 
-O problema de criar a sessão para guardar a autenticação do usuário é o fato de quando publicar uma nova versão, ou até mesmo em abiente de desenvovimento quando usamos o nodemon, ele vai apagar a sessão. Nesse caso precisamos armazenar a sessão em algum lugar, seja em um arquivo ou em um banco dados. Nesse exemplo utilizaremos em arquivo.
+O problema de criar a sessão para guardar a autenticação do usuário é o fato de quando publicar uma nova versão, ou até mesmo em ambiente de desenvovimento quando usamos o nodemon, ele vai apagar a sessão. Nesse caso precisamos armazenar a sessão em algum lugar, seja em um arquivo ou em um banco dados. Nesse exemplo utilizaremos em arquivo.
 
 Para criação do arquivo de sessão, adicionar o pacote **connect-loki**
 

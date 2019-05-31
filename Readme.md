@@ -2,6 +2,7 @@
 
 Configurações Iniciais
 
+- Instalar [Node Version Manager - NVM](/src/nvm.md)
 - Instalar o [Yarn](https://yarnpkg.com/en/)
 - Instalar extensões **EditorConfig**, **eslint** e **prettier code formater**
 

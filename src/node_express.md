@@ -5,8 +5,9 @@
 ---
 
 - [Iniciando Express](/src/express/startup.md)
-- [Exceptions](/src/express/esceptions.md)
+- [Exceptions](/src/express/exceptions.md)
 - [Autenticação por Sessão](/src/express/sessionAuthentication.md)
 - [Autenticação por JWT](/src/express/JwtAuthentication.md)
 - [Transações](/src/express/transactions.md)
 - [Flash Messages](/src/express/flash.md)
+- [Validações](/src/express/validations.md)

@@ -99,6 +99,18 @@ Crie o arquivo **.babelrc** na raiz da aplicação
 }
 ```
 
+Adicione o pacote **regenerator-runtime**
+
+```
+yarn add regenerator-runtime
+```
+
+Use o pacote no arquivo **index.js**
+
+```js
+require("regenerator-runtime");
+```
+
 Referência [medium.com](https://medium.com/@binyamin/creating-a-node-express-webpack-app-with-dev-and-prod-builds-a4962ce51334)
 
 ## Criando o arquivo de configuração do windows service
