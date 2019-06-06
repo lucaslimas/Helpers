@@ -26,7 +26,7 @@ A príncipal função que irei utilizar do webpack, será a criação de um buil
 Instalar os seguintes pacotes:
 
 ```
-yarn add -D webpack webpack-cli webpack-node-externals @babel/core @babel/preset-env babel-loader copy-webpack-plugin regenerator-runtime
+yarn add -D webpack webpack-cli webpack-node-externals @babel/core @babel/preset-env babel-loader copy-webpack-plugin
 ```
 
 Criar o arquivo de configuração do webpack com o nome **webpack.config.js** na raiz da aplicação

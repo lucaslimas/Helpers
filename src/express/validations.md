@@ -44,7 +44,7 @@ routes.get("/api/v1/users", validate(UserValidator), (req, res) =>
 
 Veja [Exceptions](/src/express/exceptions.md)
 
-Referência [Joi Npm](https://www.npmjs.com/package/joi)
+Referência [Joi Npm](https://www.npmjs.com/package/joi/v/6.6.0)
 
 # Comandos utilizados nesse artigo
 
