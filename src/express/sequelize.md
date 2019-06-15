@@ -128,8 +128,8 @@ db.Sequelize = Sequelize;
 module.exports = db;
 ```
 
-- [Criando Modelos](/src/sequelize/models.md)
-- [Criando Controles](/src/sequelize/controllers.md)
+- [Criando Modelos](/src/express/sequelize/models.md)
+- [Criando Controles](/src/exoress/sequelize/controllers.md)
 
 [Manual oficial de referência do Sequelize](http://docs.sequelizejs.com/manual/)
 

@@ -1,62 +1,10 @@
 [Voltar](/Readme.md)
 
-# Node.js
-
-Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos distribuídos.
-
-[Referência](http://nodebr.com/o-que-e-node-js/)
-
 # Express
 
 O Express.js é um framework Node que pode ser comparado com o Laravel para PHP, ele cria abstrações de rotas, middlewares e muitas outras funções para facilitar a criação tanto de API's quanto SPA's.
 
-## Iniciando aplicação Node.js com Express
-
-Criar a pasta para o projeto e acessa-lá através da linha de comando. Executar o seguinte comando para iniciar o projeto node.js
-
-```
-yarn init -y
-```
-
-> O -y indica para criar os arquivos com os valores default
-> Será criado o arquivo **package.json** com as informações do projeto.
-
-## Configurações do Ambiente de desenvolvimento
-
-- Configurar o [ESLint](/src/eslint.md).
-- Configurar o [EditorConfig](/src/editorConfig.md).
-
-## Instalando o Nodemon
-
-> Nodemon é um file watcher que roda internamente o próprio comando node. Dessa forma toda e qualquer atualização é executada automaticamente, sem a necessidade de parar e rodar o node novamente.
-
-Adicionar o pacote **nodemon** em modo de desenvolvimento
-
-```
-yarn add nodemon -D
-```
-
-Adicionar o seguinte script para inicialização do nodemon. Adicionar o script dentro do **package.json**
-
-```json
-"scripts": {
-  "start": "nodemon src/index.js"
-}
-```
-
-Por padrão utilizamos "start" no script, dessa forma quando executar o comando, não precisará escrever node index.js e sim yarn start.
-
-```
-yarn start
-```
-
-Para parar o monitoramento aperte
-
-```
-Ctrl + C
-```
-
-## Disponilizando o serviço web
+## Instalando o Express
 
 Para disponibilizar serviços para ser consumidos pelos front-ends, será usado o pacote **express**, esse pacote é utilizado para controlar as requisições (rotas) no servidor.
 
@@ -145,6 +93,10 @@ server.listen(port, () => {
   console.log("Press Ctrl+C to quit.");
 });
 ```
+
+## Instalando o Nodemon
+
+Instalar o atualizador de arquivos [Nodemon](/src/express/nodemon.md)
 
 ## Testando o serviço
 

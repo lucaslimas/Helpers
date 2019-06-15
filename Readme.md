@@ -1,60 +1,29 @@
 # Arquivo de Ajuda
 
-Configurações Iniciais
+## Configurações Iniciais
 
-- Instalar [Node Version Manager - NVM](/src/nvm.md)
+- Instalar o [Git](https://git-scm.com/)
+- Criar conta no [Github](https://github.com)
+- Instalar o [Node Version Manager - NVM](/src/nvm.md)
 - Instalar o [Yarn](https://yarnpkg.com/en/)
-- Instalar extensões **EditorConfig**, **eslint** e **prettier code formater**
+- Instalar a fonte [FiraCode](https://github.com/lucaslimas/resources/tree/master/FiraCode)
+- Instalar o [VSCode](https://code.visualstudio.com/)
+- Configurar o [VSCode](/src/vscode.md)
+- Instalar as extensões **Material Icon Theme**, **EditorConfig**, **eslint** e **prettier code formater**
+- Instalar o tema [Dracula](/src/dracula.md)
+- Instalar o [Insominia](https://insomnia.rest/)
 
-> CTRL + SHIFT + P  
-> Opção -> Open Settings (JSON)
+## Server (node.js)
 
-```json
-{
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 24,
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "editor.formatOnSave": true,
-  "editor.rulers": [80, 120],
-  "editor.tabSize": 2,
-  "editor.renderLineHighlight": "gutter",
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx",
-    "nunjucks": "html"
-  },
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "nunjucks": "html"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "breadcrumbs.enabled": true,
-  "editor.parameterHints.enabled": true,
-
-  "prettier.eslintIntegration": true,
-
-  "explorer.confirmDelete": false,
-  "files.autoSave": "off",
-  "window.zoomLevel": -1,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
-}
-```
-
-## Server
-
-- Configurando Ambiente de desenvolvimento
-- [Adonis](/src/node_adonis.md)
+- [Iniciando Projeto](/src/node_startup.md)
 - [Express](/src/node_express.md)
-- [Sequelize](/src/sequelize.md)
-- [PostgresSQL](/src/postgresSQL.md)
+- [Adonis](/src/node_adonis.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
 - [Windows Service](/src/windows_service.md)
 
-## Mobile
+## Web (react)
+
+## Mobile (react-native)
 
 - Criando Ambiente de desenvolvimento
 - Genymotion
@@ -64,3 +33,7 @@ Configurações Iniciais
 - [Reactotron](/src/mobile/reactotron.md)
 - [React DevTools](/src/mobile/devtools.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
+
+## Anexos
+
+- Docker
