@@ -16,6 +16,7 @@
 ## Server (node.js)
 
 - [Iniciando Projeto](/src/node_startup.md)
+- Debug
 - [Express](/src/node_express.md)
 - [Adonis](/src/node_adonis.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)

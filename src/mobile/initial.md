@@ -2,13 +2,19 @@
 
 # Configurações Iniciais
 
+Adicionar de forma global o CLI do react-native
+
+```
+yarn global add react-native-cli
+```
+
 Para iniciar um projeto React-Native padrão, basta executar o comando
 
 ```
 react-native init nome-do-app
 ```
 
-> Toda a estrutura básica será criada para seu aplicativo
+> Toda a estrutura básica será criada para seu aplicativo.
 
 Acessa a pasta do aplicativo.
 
@@ -91,6 +97,7 @@ Veja [Configurando Babel Root Import](/src/mobile/babelrootimport.md)
 # Comandos utilizados nesse artigo
 
 ```
+yarn global add react-native-cli
 react-native init nome-do-app
 react-native start
 react-native start --reset-cache
