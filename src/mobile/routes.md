@@ -18,6 +18,69 @@ react-native link react-native-gesture-handler
 
 > Sempre que executar o comando de link é necessário executar o comando **react-native run-android** ou **react-native run-ios**.
 
+## Configuração Android
+
+Para celulares android, é necessário incluir 3 imports no arquivo Adicionar as 3 Refêrencias no arquivo **MainActivity.java**, localizado na pasta **android/app/src/main/java/com/NOME-PROJETO**
+
+Imports:
+
+```java
+import com.facebook.react.ReactRootView;
+import com.facebook.react.ReactActivityDelegate;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+```
+
+Adiconar o Delegate:
+
+```java
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+        return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
+```
+
+Arquivo final:
+
+```java
+package com.luminatticrmmobile;
+
+import com.facebook.react.ReactActivity;
+
+import com.facebook.react.ReactRootView;
+import com.facebook.react.ReactActivityDelegate;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+public class MainActivity extends ReactActivity {
+
+  /**
+   * Returns the name of the main component registered from JavaScript. This is
+   * used to schedule rendering of the component.
+   */
+  @Override
+  protected String getMainComponentName() {
+    return "luminatticrmmobile";
+  }
+
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+        return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
+}
+
+```
+
+## Configuração iOs
+
 Crie o arquivo de **routes.js** dentro da pasta **src**
 
 ```js

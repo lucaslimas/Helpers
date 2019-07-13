@@ -1,4 +1,4 @@
-[Voltar](/Readme.md)
+[Voltar](/src/node_express.md)
 
 # Exceções
 
@@ -59,7 +59,7 @@ E importar no arquivo de rotas
 const handle = require("express-async-handler");
 ```
 
-Inforar o handler antes dos métodos chamados nos controles nas rotas. Por exemplo no arquivo **routes.js**
+Informar o handler antes dos métodos chamados nos controles nas rotas. Por exemplo no arquivo **routes.js**
 
 ```js
 const routes = express.Router();

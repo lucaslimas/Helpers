@@ -1,4 +1,4 @@
-[Voltar](/src/sequelize.md)
+[Voltar](/src/express/sequelize.md)
 
 # Models
 
@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 Criar o arquivo de migração para o usuário
 
 ```
-npx sequelize migration:create --name=create-users
+    npx sequelize migration:create --name=create-users
 ```
 
 No comando acima, podemos dar o nome que for necessário para identificar a migração, no nosso exemplo será uma migração de criação da tabela usuários.
@@ -102,6 +102,10 @@ Para voltar a ultima migration
 ```
 npx sequelize db:migrate:undo
 ```
+
+# Mais informações
+
+Veja como acessar o modelo pelo controller em [Controllers](/src/express/sequelize/controllers.md).
 
 # Comandos utilizados nesse artigo
 

@@ -14,11 +14,11 @@ Para iniciar um projeto React-Native padrão, basta executar o comando
 react-native init nome-do-app
 ```
 
-> Toda a estrutura básica será criada para seu aplicativo.
+> Versão 0.60 está com erro. Usar o comando **react-native init "nome-aplicacao" --version="react-native@0.59.10"**
 
 Acessa a pasta do aplicativo.
 
-Abra o emulador [genymotion](/src/mobile/genymotion.md) e execute o comando:
+Abra o emulador e execute o comando:
 
 Android
 
@@ -58,22 +58,42 @@ react-native start --reset-cache
 
 Após a criação da estrutura básica é uma boa prática configurar o ambiente de desenvolvimento para uma padronização de código. Para isso vamos usar o Eslint.
 
-Veja [Configurando o Eslint](/src/eslint.md)
+> Yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
 
-Após a configuração do eslint, adicione na propriedade rules o seguinte código:
+Iniciar o ESLINT com o arquivo de configuração em Javascript. Veja [Configurando o Eslint](/src/eslint.md)
 
-```json
-"rules": {
-      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-      "global-require": "off",
-      "react/jsx-filename-extension": [
-        "error",
-        {
-          "extensions": [".js", ".jsx"]
-        }
-      ],
-      "import/prefer-default-export": "off"
-    }
+Alterar o arquivo **.eslintrc.js**
+
+```js
+module.exports = {
+  env: {
+    es6: true
+  },
+  extends: ["airbnb", "prettier", "prettier/react"],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly"
+  },
+  parser: "babel-eslint",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018,
+    sourceType: "module"
+  },
+  plugins: ["react"],
+  rules: {
+    "prettier/prettier": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        extensions: [".jsx", ".js"]
+      }
+    ],
+    "import/prefer-default-export": "off"
+  }
+};
 ```
 
 Configure o vscode para garantir o padrão no ambiente de desenvolvimento.
@@ -83,16 +103,6 @@ Veja [Configurando EditorConfig](/src/editorConfig.md)
 Agora é necessario configurar o babel-root-import, para que o aplicativo entenda o caminho relativo da aplicação
 
 Veja [Configurando Babel Root Import](/src/mobile/babelrootimport.md)
-
-# Configure Debugs
-
----
-
-- [DebugJS](/src/mobile/debugjs.md)
-- [Reactotron](/src/mobile/reactotron.md)
-- [React DevTools](/src/mobile/devtools.md)
-
----
 
 # Comandos utilizados nesse artigo
 

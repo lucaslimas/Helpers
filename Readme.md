@@ -17,6 +17,7 @@
 
 - [Iniciando Projeto](/src/node_startup.md)
 - Debug
+- [Nodemon](/src/nodemon.md)
 - [Express](/src/node_express.md)
 - [Adonis](/src/node_adonis.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
@@ -27,13 +28,21 @@
 ## Mobile (react-native)
 
 - Criando Ambiente de desenvolvimento
-- Genymotion
-- Debug no Celular
-- [Configurações Iniciais](/src/mobile/initial.md)
+- Emulador do Android Studio
+- Emulador Genymotion
+- [Iniciando Projeto](/src/mobile/initial.md)
+- [Nome da Aplicação](/src/mobile/displayName.md)
+- [Ícone da Aplicação](/src/mobile/appIcon.md)
+- [Splash Screen](/src/mobile/splashScreen.md)
+- [Estrutura do Projeto](/src/mobile/struture.md)
+- Stateless e StateFullComponent
+- [Rotas](/src/mobile/routes.md)
 - [DebugJS](/src/mobile/debugjs.md)
 - [Reactotron](/src/mobile/reactotron.md)
 - [React DevTools](/src/mobile/devtools.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
+- [Erros Comuns](/src/mobile/commonErrors.md)
+- [Internacionalização - i18n](/src/mobile/internationalization.md)
 
 ## Anexos
 
