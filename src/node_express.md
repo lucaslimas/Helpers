@@ -5,8 +5,8 @@
 ---
 
 - [Iniciando o Express](/src/express/startup.md)
-- [Postbird](/src/express/postgresSQL.md)
-- [PostgresSQL](/src/express/postbird.md)
+- [Postbird](/src/express/postbird.md)
+- [PostgreSQL](/src/express/postgresSQL.md)
 - MariaDB
 - MongoDB
 - [Sequelize](/src/express/sequelize.md)
