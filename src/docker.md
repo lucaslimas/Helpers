@@ -46,6 +46,12 @@ Caso não funcione o docker siga os seguintes passos:
 dism /Online /Enable-Feature:Microsoft-Hyper-V /All
 ```
 
+ou
+
+```
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+```
+
 Reinicie a máquina e caso ainda continue com problema de **elevação**, execute o comando no powershell como administrador:
 
 ```

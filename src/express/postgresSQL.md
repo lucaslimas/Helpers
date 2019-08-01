@@ -6,7 +6,7 @@
 
 ## Download
 
-[PostgreSQL](https://www.postgresql.org/)
+[PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 ## PostgresSQL usando Docker
 

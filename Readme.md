@@ -22,8 +22,9 @@
 - [Adonis](/src/node_adonis.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
 - [Windows Service](/src/windows_service.md)
+- PM2
 
-## Web (react)
+## Web (reactJS)
 
 ## Mobile (react-native)
 
@@ -34,8 +35,8 @@
 - [Nome da Aplicação](/src/mobile/displayName.md)
 - [Ícone da Aplicação](/src/mobile/appIcon.md)
 - [Splash Screen](/src/mobile/splashScreen.md)
+- [StatusBar](src/mobile/statusbar.md)
 - [Estrutura do Projeto](/src/mobile/struture.md)
-- Stateless e StateFullComponent
 - [Rotas](/src/mobile/routes.md)
 - [DebugJS](/src/mobile/debugjs.md)
 - [Reactotron](/src/mobile/reactotron.md)
@@ -43,7 +44,16 @@
 - [Babel Root Import](/src/mobile/babelrootimport.md)
 - [Erros Comuns](/src/mobile/commonErrors.md)
 - [Internacionalização - i18n](/src/mobile/internationalization.md)
+- [Status da Internet](/src/mobile/internetStatus.md)
+- CodePush
+
+## Outros
+
+- Stateless, StateFullComponent e FunctionalComponent
+- Redux
+- React Hooks
 
 ## Anexos
 
 - Docker
+- Live Share (Extensões)
