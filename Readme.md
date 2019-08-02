@@ -50,8 +50,8 @@
 ## Outros
 
 - Stateless, StateFullComponent e FunctionalComponent
-- Redux
-- React Hooks
+- [React Hooks](/src/reacthooks.md)
+- [Redux](/src/redux.md)
 
 ## Anexos
 
