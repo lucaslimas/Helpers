@@ -28,7 +28,7 @@
 
 ## Mobile (react-native)
 
-- Criando Ambiente de desenvolvimento
+- [Criando Ambiente de desenvolvimento](https://docs.rocketseat.dev/ambiente-react-native/android/windows)
 - Emulador do Android Studio
 - Emulador Genymotion
 - [Iniciando Projeto](/src/mobile/initial.md)
@@ -38,6 +38,8 @@
 - [StatusBar](src/mobile/statusbar.md)
 - [Estrutura do Projeto](/src/mobile/struture.md)
 - [Rotas](/src/mobile/routes.md)
+- Navegação
+- [Fontes Customizadas](/src/mobile/customFonts.md)
 - [DebugJS](/src/mobile/debugjs.md)
 - [Reactotron](/src/mobile/reactotron.md)
 - [React DevTools](/src/mobile/devtools.md)

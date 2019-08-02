@@ -240,7 +240,7 @@ export default connect(
 
 ### React Hooks
 
-Instalar a nova versão do React-Redux que possuí suporte ao redux
+Outra forma de utilizar o redux é instalar a nova versão do React-Redux que possuí suporte ao hooks.
 
 ```
 yarn add react-redux@next
