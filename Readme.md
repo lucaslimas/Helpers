@@ -51,7 +51,8 @@
 
 ## Outros
 
-- Stateless, StateFullComponent e FunctionalComponent
+- [Styled-Components](/src/styledComponents.md)
+- [Componentes](/src/components.md)
 - [React Hooks](/src/reacthooks.md)
 - [Redux](/src/redux.md)
 
