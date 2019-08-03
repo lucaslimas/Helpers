@@ -37,8 +37,8 @@
 - [Splash Screen](/src/mobile/splashScreen.md)
 - [StatusBar](src/mobile/statusbar.md)
 - [Estrutura do Projeto](/src/mobile/struture.md)
+- [Navegação](/src/mobile/navigation.md)
 - [Rotas](/src/mobile/routes.md)
-- Navegação
 - [Fontes Customizadas](/src/mobile/customFonts.md)
 - [DebugJS](/src/mobile/debugjs.md)
 - [Reactotron](/src/mobile/reactotron.md)
