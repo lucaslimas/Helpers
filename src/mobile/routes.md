@@ -79,7 +79,13 @@ public class MainActivity extends ReactActivity {
 
 ```
 
-## Configuração iOs
+## Configuração
+
+Adicionar a biblioteca de navegação
+
+```
+yarn add react-navigation
+```
 
 Crie o arquivo de **routes.js** dentro da pasta **src**
 

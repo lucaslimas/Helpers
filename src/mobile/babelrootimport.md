@@ -47,7 +47,7 @@ yarn add eslint-import-resolver-babel-plugin-root-import -D
 yarn add babel-eslint -D
 ```
 
-Adicionar as configuração do babel no arquivo **.eslintrc.json** localizado na raiz do aplicativo.
+Adicionar as configuração do babel no arquivo **.eslintrc.json** ou **.eslintrc.js** localizado na raiz do aplicativo.
 
 ```json
   "settings": {
@@ -80,6 +80,6 @@ Referência [babel](https://www.npmjs.com/package/babel-plugin-root-import)
 
 ```
 yarn add babel-plugin-root-import -D
-yarn add
 yarn add eslint-import-resolver-babel-plugin-root-import -D
+yarn add babel-eslint -D
 ```
