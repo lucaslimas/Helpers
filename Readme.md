@@ -26,6 +26,10 @@
 
 ## Web (reactJS)
 
+- [Iniciando Projeto](/src/web/start.md)
+- [Rotas](/src/web/routes.md)
+- [Estilização global](/src/web/globalStyles.md)
+
 ## Mobile (react-native)
 
 - [Criando Ambiente de desenvolvimento](https://docs.rocketseat.dev/ambiente-react-native/android/windows)

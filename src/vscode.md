@@ -29,8 +29,10 @@ Informe os seguintes propriedades:
   "editor.lineHeight": 24,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "workbench.iconTheme": "material-icon-theme",
-  "editor.formatOnSave": true,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.tabSize": 2,
   "editor.renderLineHighlight": "gutter",
   "emmet.syntaxProfiles": {
@@ -44,14 +46,52 @@ Informe os seguintes propriedades:
   "javascript.updateImportsOnFileMove.enabled": "never",
   "breadcrumbs.enabled": true,
   "editor.parameterHints.enabled": true,
-  "prettier.eslintIntegration": true,
+  "javascript.suggest.autoImports": false,
+  // "prettier.eslintIntegration": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
   "explorer.confirmDelete": false,
   "files.autoSave": "off",
   "window.zoomLevel": -1,
+  "editor.formatOnSave": false,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.startupEditor": "welcomePage",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
 }
 ```
+
+## Instalando o prettier 
+
+Aperte CTRL + P  e cole a seguinte linha: 
+```
+ext install esbenp.prettier-vscode
+```
+
+Pressione enter para instalar.

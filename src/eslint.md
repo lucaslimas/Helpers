@@ -4,9 +4,12 @@
 
 ESLint é um gerenciador de código, deixando todos os códigos feitos por diversos desenvolvedores com o mesmo padrão. Isso garante uma padronização no código fonte da aplicação independentemente do desevolvedor.
 
+Referência [Eslint](https://github.com/prettier/prettier-vscode#vscode-eslint-and-tslint-integration)
+
+
 ## Instalando ESLint
 
-Necessário estar com as extensões **eslint** e **prettier** instaladas no vscode. Veja [Instalando as extensões eslint e prettier](src/extentions/index.md).
+Necessário estar com as extensões **eslint** e **prettier** instaladas no vscode. Veja [Instalando as extensões eslint e prettier](extentions/index.md).
 
 Adicionar o pacote eslint em modo de desenvolvimento
 
@@ -67,9 +70,9 @@ Nesse momento será exibido no terminal algumas perguntas para que o eslint ente
 
 ### What format do you want your config file to be in?
 
-- [ ] JavaScript
+- [x] JavaScript
 - [ ] YAML
-- [x] JSON
+- [ ] JSON
 
 ### Would you like to install them now with npm? (Y/n)
 
