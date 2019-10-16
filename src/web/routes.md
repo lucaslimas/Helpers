@@ -6,13 +6,20 @@ Permite navegar entre as páginas na aplicação sem carregar um novo html, pois
 
 ## Iniciando as Rotas
 
-Adicionar o pacote de gerenciamento de rotas
+Adicionar o pacote de gerenciamento de rotas e pacote history que permite navegar na aplicação a partir de qualquer ponto do projeto
 
 ```
-yarn add react-router-dom
+yarn add react-router-dom history
 ```
 
-Adicionar o arquivo **routes.js** dentro da pasta **src**.
+Criar a pasta **routes** dentro da pasta **src** e adicionar o arquivo **history.js**
+```js
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
+
+export default history;
+```
 
 Criar a pasta **pages** dentro da pasta **src**, onde serão armazenados as páginas da aplicação.
 
@@ -37,18 +44,19 @@ export default function Test() {
 
 ## Configurando as Rotas
 
-No arquivo **routes.js** configurar o gerenciador de rotas
+Criar o arquivo **index.js** dentro da pasta **routes**
 
 ```js
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
+import history from "./history";
 
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/test" component={Test} />
@@ -74,6 +82,81 @@ function App() {
 
 export default App;
 ```
+
+## Definindo acesso privado das Rotas
+
+Em algumas aplicações é necessário que o acesso a determinadas rotas sejam permitidas somente se o usuário estiver logado na aplicação. Para bloquear esse tipo de acesso ao usuário que não está logado.
+
+Criar o arquivo **route.js** dentro da pasta **routes**
+```js
+import React from "react";
+import PropTypes from "prop-types";
+import { Route, Redirect } from "react-router-dom";
+
+export default function RouteWrapper({
+  component: Component,
+  isPrivate,
+  ...rest
+}) {
+  const signed = false;
+
+    if (!signed && isPrivate) {
+    const { location } = rest;
+
+    const path =
+      location.pathname === "/login" || location.pathname === "/"
+        ? `/${encodeURIComponent("/home")}`
+        : `/${encodeURIComponent(location.pathname)}`;
+
+    return <Redirect to={`/login${path}`} />;
+  }
+
+  if (signed && !isPrivate) {
+    return <Redirect to="/" />;
+  }
+
+  return <Route {...rest} component={Component} />;
+}
+
+RouteWrapper.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
+  isPrivate: PropTypes.bool
+};
+
+RouteWrapper.defaultProps = {
+  isPrivate: false
+};
+```
+
+> A constante **signed** deve ser obtida pelo Redux, onde serão guardas as informações do logado
+
+Veja mais em [Autenticação](/src/web/authentication.md).
+
+Alterar no arquivo de rotas o objeto Route que está no **react-router-dom** para o novo arquivo **route.js**
+
+```js
+import React from "react";
+import { Router, Switch } from "react-router-dom";
+import Route from "./route";
+import history from "./history";
+
+import Home from "~/pages/Home";
+import Test from "~/pages/Test";
+import E404 from "~/pages/Errors/E404";
+
+export default function Routes() {
+  return (
+    <Router history={history}>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/test/:name" component={Test} isPrivate />
+        <Route path="/" component={E404} />
+      </Switch>
+    </Router>
+  );
+}
+```
+
 
 ## Exibindo página não encontrada
 
@@ -102,7 +185,8 @@ Adicionar como ultima opção da rota
 Arquivo Final
 ```js
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
+import history from "./history";
 
 import Home from "./pages/Home";
 import Test from "./pages/Test";
@@ -110,13 +194,13 @@ import E404 from "./pages/Errors/E404";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/test" component={Test} />
         <Route path="/" component={E404} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 }
 ```
@@ -145,15 +229,16 @@ export default function Home() {
 }
 ```
 
-Todos os métodos para navegar entre o histórico de navegação, podem ser acessados pela propriedade **history** para para o componente.
+Todos os métodos para navegar entre o histórico de navegação, podem ser acessados pelo componente **history**.
 
-Para configurar o botão voltar, adicionar um botão na página de **Teste** e utilize o método **goBack()** do history
+Para configurar o botão voltar, adicionar um botão na página de **Teste** e utilize o método **goBack()** do history.
 
 ```js
 import React from "react";
 import PropTypes from "prop-types";
+import history from "~/routes/history";
 
-export default function Test({ history }) {
+export default function Test() {
   function onBackClick() {
     history.goBack();
   }
@@ -166,10 +251,6 @@ export default function Test({ history }) {
     </>
   );
 }
-
-Test.propTypes = {
-  match: PropTypes.shape().isRequired
-};
 ```
 
 ### Passando parâmetro pela rota
@@ -195,7 +276,8 @@ Para obter o parâmetro na página de teste, basta acessar o nome do parâmetro 
 
 ```js
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
+import history from "./history";
 
 import Home from "./pages/Home";
 import Test from "./pages/Test";
@@ -203,13 +285,13 @@ import E404 from "./pages/Errors/E404";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/test/:name" component={Test} />
         <Route path="/" component={E404} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 }
 ```
@@ -237,8 +319,9 @@ export default function Home() {
 ```js
 import React from "react";
 import PropTypes from "prop-types";
+import history from "~/routes/history";
 
-export default function Test({ history, match }) {
+export default function Test({  match }) {
   const { name } = match.params;
 
   function onBackClick() {
@@ -256,7 +339,6 @@ export default function Test({ history, match }) {
 }
 
 Test.propTypes = {
-  history: PropTypes.shape().isRequired,
   match: PropTypes.shape().isRequired
 };
 ```

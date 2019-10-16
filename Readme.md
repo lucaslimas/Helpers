@@ -29,6 +29,7 @@
 - [Iniciando Projeto](/src/web/start.md)
 - [Rotas](/src/web/routes.md)
 - [Estilização global](/src/web/globalStyles.md)
+- [Autenticação](/src/web/authentication.md)
 
 ## Mobile (react-native)
 
@@ -56,6 +57,7 @@
 ## Outros
 
 - [Styled-Components](/src/styledComponents.md)
+- [Polished](/src/polished.md)
 - [Componentes](/src/components.md)
 - [React Hooks](/src/reacthooks.md)
 - [Redux](/src/redux.md)
