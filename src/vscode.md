@@ -95,3 +95,10 @@ ext install esbenp.prettier-vscode
 ```
 
 Pressione enter para instalar.
+
+## Instalando o Color Highlight
+
+Instalar a extensão para exibição das cores no visual studio
+'''
+Color Highlight
+'''

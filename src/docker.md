@@ -113,3 +113,8 @@ Referência [comandos docker](https://medium.com/@fannyvieira/docker-basic-coman
 Outra opção do docker é o docker toolbox, caso esteja usando o Windows e não funcione o Docker, instale a versão toolbox.
 
 [Docker Toolbox](https://github.com/docker/toolbox/releases/tag/v18.09.3)
+
+## Informações adicionais
+
+Outra informação necessária é alterar para Linux os containers, basta clicar em **Switch to linux containers**.
+Após a alterção para linux containers, espere alguns instantes para que a alteração seja finalizada.
