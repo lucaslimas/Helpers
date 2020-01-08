@@ -48,3 +48,8 @@ react-native run-android
 ```
 react-native start --reset-cache
 ```
+
+
+## Removendo font do iOS
+
+https://medium.com/@danielskripnik/how-to-add-and-remove-custom-fonts-in-react-native-b2830084b0e4

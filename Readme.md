@@ -22,7 +22,6 @@
 - [Adonis](/src/node_adonis.md)
 - [Babel Root Import](/src/mobile/babelrootimport.md)
 - [Windows Service](/src/windows_service.md)
-- PM2
 
 ## Web (reactJS)
 
@@ -30,6 +29,7 @@
 - [Rotas](/src/web/routes.md)
 - [Estilização global](/src/web/globalStyles.md)
 - [Autenticação](/src/web/authentication.md)
+- [Criando minha própria Library](/src/web/myLibrary.md)
 
 ## Mobile (react-native)
 
@@ -53,6 +53,7 @@
 - [Internacionalização - i18n](/src/mobile/internationalization.md)
 - [Status da Internet](/src/mobile/internetStatus.md)
 - CodePush
+- [Deploy](/src/mobile/deploy.md)
 
 ## Outros
 
@@ -61,6 +62,7 @@
 - [Componentes](/src/components.md)
 - [React Hooks](/src/reacthooks.md)
 - [Redux](/src/redux.md)
+- [PM2](/src/pm2.md)
 
 ## Anexos
 
