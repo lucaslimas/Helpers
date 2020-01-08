@@ -23,6 +23,12 @@ Configurar o [EditorConfig](/src/editorConfig.md)
 
 [Adicionar o ESLint](/src/eslint.md) em modo de desenvolvimento.
 
+## Configurar o Root Import
+
+Adicionar a funcionalidade de importar os pacotes usando o **~**.
+
+[Configurando o Babel Root Import](/src/web/rootImport.md);
+
 ## Configurando o Prettier
 
 Adicionar os pacotes do Prettier em modo de desenvolvimento.
@@ -67,13 +73,6 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": "off"
-  },
-  settings: {
-    "import/resolver": {
-      "babel-plugin-root-import": {
-        rootPathSuffix: "src"
-      }
-    }
   }
 };
 ```
