@@ -29,6 +29,7 @@
 - [Rotas](/src/web/routes.md)
 - [Estilização global](/src/web/globalStyles.md)
 - [Autenticação](/src/web/authentication.md)
+- [Babel Root Import](/src/web/rootimport.md)
 - [Criando minha própria Library](/src/web/myLibrary.md)
 
 ## Mobile (react-native)
