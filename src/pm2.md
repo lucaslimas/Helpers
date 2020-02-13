@@ -23,7 +23,12 @@ pm2 delete   <app_name|id|'all'|json_conf>
 
 Adicionando um serviço
 ```
-pm2 start src/index.js -name "Serviço Name"
+pm2 start src/index.js --name ServicoName
+```
+
+Renomeando um serviço
+```
+pm2 restart id --name newName
 ```
 
 Salvar a lista após a inclusão

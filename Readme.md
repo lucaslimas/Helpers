@@ -31,6 +31,7 @@
 - [Autenticação](/src/web/authentication.md)
 - [Babel Root Import](/src/web/rootImport.md)
 - [Criando minha própria Library](/src/web/myLibrary.md)
+- [PWA](/src/web/pwa.md)
 
 ## Mobile (react-native)
 
