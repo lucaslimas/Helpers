@@ -65,6 +65,7 @@
 - [React Hooks](/src/reacthooks.md)
 - [Redux](/src/redux.md)
 - [PM2](/src/pm2.md)
+- [Alterando Credenciais do Git](/src/git.md)
 
 ## Anexos
 
