@@ -37,12 +37,12 @@ Salvar a lista após a inclusão
 pm2 save
 ```
 
-# Inicializar o PM2 com boot da mãquina
+## Inicializar o PM2 com boot da máquina
 
-Sempre que o computador for reiniciado, o pm2 não iria iniciar sozinho. Para iniciar o PM2 junto ao sistema operacional, execute os passos conforme o seu sistema operacional
+Sempre que o computador for reiniciado, o pm2 não iria iniciar automaticamente, para iniciar o PM2 junto ao sistema operacional, execute os passos conforme o seu sistema operacional
 
 
-## Servidor Windows
+### Servidor Windows
 
 Necessário instalar o pm2-windows-startup para o Windows
 ```
@@ -50,7 +50,7 @@ npm install pm2-windows-startup -g
 pm2-startup install
 ```
 
-## Linux
+### Linux
 
 Para incluir no boot na máquina do linux
 
