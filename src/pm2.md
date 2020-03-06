@@ -39,7 +39,7 @@ pm2 save
 
 ## Inicializar o PM2 com boot da máquina
 
-Sempre que o computador for reiniciado, o pm2 não iria iniciar automaticamente, para iniciar o PM2 junto ao sistema operacional, execute os passos conforme o seu sistema operacional
+Sempre que o computador for reiniciado, o pm2 não irá iniciar automaticamente, para iniciar o PM2 junto ao sistema operacional, execute os passos conforme o seu sistema operacional
 
 
 ### Servidor Windows

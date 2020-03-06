@@ -4,6 +4,8 @@
 
 Sequelize é um ORM, ferramenta usada para abstrair a parte de Banco de dados. Desta forma é possível usar javascript para criar, alterar, excluir, etc ao invés de usar comandos sql de insert, update, delete.
 
+Referência [Diomalta](https://medium.com/@diomalta/migrations-e-seeders-no-sequelizejs-67ba3571ed0e)
+
 ## Instalação
 
 Instalar os pacote do **sequelize** e **sequelize-cli**
