@@ -1,4 +1,5 @@
 [Referência](https://www.npmjs.com/package/pm2)
+[Referência Doc](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
 
 Instalar globalment o pm2
 
