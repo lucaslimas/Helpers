@@ -62,6 +62,72 @@ bcdedit /set hypervisorlaunchtype auto
 
 Caso continue com erro acesse o site [Intel](https://software.intel.com/en-us/intel-system-studio-docker-install-windows-troubleshoot-docker-for-windows)
 
+# Docker windows server 2019
+Docker windows não funciona no server 2019
+
+## Dockers windows
+```
+Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+Install-Package -Name docker -ProviderName DockerMsftProvider -Force -RequiredVersion 19.03
+Start-Service docker 
+```
+Após reiniciar o serviço, rode o comando:
+```
+docker version
+```
+
+Ref. [Blog siseyed](https://blog.sixeyed.com/getting-started-with-docker-on-windows-server-2019/)
+
+
+## Dockers linux
+
+Desinstalando o docker windows
+
+```
+Uninstall-Package -Name docker -ProviderName DockerMSFTProvider
+```
+
+Habilitando a virtualização
+
+```
+Get-VM WinContainerHost | Set-VMProcessor -ExposeVirtualizationExtensions $true
+```
+
+> CORREÇÃO DO COMANDO
+```
+Get-VM *WinContainerHost* | Set-VMProcessor -ExposeVirtualizationExtensions $true
+```
+
+```
+Install-Module DockerProvider
+Install-Package Docker -ProviderName DockerProvider -RequiredVersion preview
+```
+
+Habilitando o linux container
+
+```
+[Environment]::SetEnvironmentVariable("LCOW_SUPPORTED", "1", "Machine")
+```
+
+Reiniciando o docker
+
+```
+Restart-Service docker
+```
+
+Ref [computing for geeks](https://computingforgeeks.com/how-to-run-docker-containers-on-windows-server-2019/#:~:text=Running%20Linux%20Containers%20on%20Windows,Uninstall%20your%20current%20Docker%20CE.)
+
+###### 
+
+```
+Install-Module DockerProvider
+Install-Package Docker -ProviderName DockerProvider -RequiredVersion preview
+[Environment]::SetEnvironmentVariable("LCOW_SUPPORTED", "1", "Machine")
+Get-VM *WinContainerHost* | Set-VMProcessor -ExposeVirtualizationExtensions $true
+Restart-Service docker
+docker info
+```
+
 # Configurando o Docker
 
 Após a instalação é necessário vincular a conta criada no docker instalado.

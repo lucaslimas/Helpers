@@ -57,6 +57,13 @@
 - CodePush
 - [Deploy](/src/mobile/deploy.md)
 
+## Typescript
+
+- [Entendendo Typescript](/src/typescript/index.md)
+- [Server](/src/typescript/server/start)
+- [Web](/src/typescript/web/start)
+- [Mobile](/src/typescript/mobile/start)
+
 ## Outros
 
 - [Styled-Components](/src/styledComponents.md)
@@ -66,8 +73,12 @@
 - [Redux](/src/redux.md)
 - [PM2](/src/pm2.md)
 - [Alterando Credenciais do Git](/src/git.md)
+- [Atalhos do VSCode](https://www.linkedin.com/pulse/todos-os-atalhos-do-vs-code-mateus-barbosa/)
 
 ## Anexos
 
 - [Docker](/src/docker.md)
 - Live Share (Extensões)
+- [Puppeteer](https://www.youtube.com/watch?v=TY7G9kWr7eg&feature=youtu.be&fbclid=IwAR0zEtbMOA3BNgsNiRv_Wc7thS_psIxenEcXK2Rm9K9QxmXlmQ4nMy0qgqs)
+- [underscore](https://underscorejs.org/)
+- [datepicker](https://allenwooooo.github.io/rc-datetime-picker/)
